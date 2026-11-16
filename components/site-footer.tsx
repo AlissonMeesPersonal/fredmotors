@@ -5,7 +5,7 @@ import { dealershipAddress, instagramUrl, whatsappUrl } from "@/lib/vehicles";
 export default function SiteFooter() {
   return <footer className="atlas-footer">
     <div className="atlas-footer-top">
-      <div><span className="mini-label">FRED MOTORS — MOTOR CULTURE</span><h2>MAIS DO QUE<br/>AUTOMÓVEIS.</h2></div>
+      <div><span className="mini-label">FRED MOTORS — MOTOR CULTURE</span><h2>Mais do que<br/><em>automóveis.</em></h2></div>
       <div className="atlas-footer-side"><p>Um novo jeito de se conectar com o extraordinário.</p><a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">INICIAR CONVERSA <ArrowUpRight size={18}/></a></div>
     </div>
     <div className="atlas-footer-columns">

@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap");
 
-:root{--night:#0b0d12;--night2:#151a22;--fog:#dbe1e5;--paper:#edece6;--white:#f6f6f1;--red:#f45d43;--red-dark:#df4b35;--muted:#87909a;--mono:"IBM Plex Mono",monospace;--display:"Syne",sans-serif;--sans:"DM Sans",sans-serif}
+:root{--night:#0b0d12;--night2:#151a22;--fog:#dbe1e5;--paper:#edece6;--white:#f6f6f1;--red:#f45d43;--red-dark:#df4b35;--muted:#87909a;--mono:"IBM Plex Mono",monospace;--display:"Space Grotesk",sans-serif;--serif:"Instrument Serif",Georgia,serif;--sans:"DM Sans",sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--night);color:var(--white);font-family:var(--sans);-webkit-font-smoothing:antialiased}
@@ -497,4 +497,142 @@ h1,h2,h3,p{margin:0}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
   .velocity-band>div{transform:translateX(-14%)}
+}
+
+
+/* ================================
+   FRED MOTORS — TYPE SYSTEM 2.1
+   Sharp modern grotesk / expressive editorial serif / mono wayfinding
+   Color scheme & 3D scene preserved.
+   ================================ */
+body{font-family:var(--sans);font-optical-sizing:auto}
+.mini-label,.eyebrow{font-size:11px;line-height:1.6;letter-spacing:.09em}
+.narrative-title h1,.narrative-title h2{
+  font-family:var(--display);
+  font-weight:700;
+  letter-spacing:-.077em;
+  line-height:.92;
+}
+.narrative-title .narrative-serif{
+  display:block;
+  font-family:var(--serif);
+  font-size:1.35em;
+  font-weight:400;
+  font-style:italic;
+  line-height:.88;
+  letter-spacing:-.055em;
+  -webkit-text-stroke:0;
+  color:var(--white);
+  text-shadow:0 6px 34px rgba(0,0,0,.22);
+  padding-right:.12em;
+}
+.showroom-narrative>p{
+  font-family:var(--sans);
+  font-size:clamp(15px,1.28vw,18px);
+  font-weight:400;
+  line-height:1.75;
+  letter-spacing:-.018em;
+  max-width:455px;
+}
+.narrative-eyebrow{font-size:11px;letter-spacing:.07em;font-weight:500}
+.narrative-caption{font-size:10px;letter-spacing:.06em}
+.manifesto-heading-row h2{
+  font-family:var(--display);
+  font-size:clamp(58px,8.4vw,160px);
+  font-weight:700;
+  letter-spacing:-.082em;
+  line-height:.98;
+}
+.manifesto-heading-row h2 em,
+.gallery-head h2 em,
+.chapter-text h2 em,
+.closing-heading h2 em,
+.atlas-footer-top h2 em,
+.catalog-head h1 span{
+  font-family:var(--serif);
+  font-weight:400;
+  font-style:italic;
+  letter-spacing:-.04em;
+  text-transform:none;
+}
+.manifesto-heading-row h2 em{color:#68706b}
+.manifesto-heading-row h2>span{color:inherit}
+.manifesto-bottom p{font-size:17px;line-height:1.82;letter-spacing:-.012em}
+.gallery-head h2{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:clamp(56px,7vw,117px);
+  line-height:1.02;
+  letter-spacing:-.072em;
+}
+.gallery-head h2 em{
+  display:inline-block;
+  font-size:1.15em;
+  line-height:.88;
+  color:var(--red);
+}
+.gallery-head-aside p{font-size:17px;line-height:1.8;letter-spacing:-.01em}
+.gallery-card-copy h3{font-weight:700;letter-spacing:-.055em}
+.gallery-card-copy>span{letter-spacing:.13em}
+.chapter-text h2{
+  font-weight:700;
+  letter-spacing:-.075em;
+  line-height:1.03;
+}
+.chapter-text h2 em{font-size:1.26em;color:var(--red);line-height:.85}
+.chapter-text p{font-size:16px;line-height:1.85;letter-spacing:-.01em}
+.closing-heading h2{
+  font-weight:700;
+  font-size:clamp(70px,10.4vw,185px);
+  line-height:1.02;
+  letter-spacing:-.08em;
+}
+.closing-heading h2 em{
+  display:inline-block;
+  color:var(--white);
+  -webkit-text-stroke:0;
+  font-size:1.07em;
+}
+.closing-aside p{font-size:16px;line-height:1.7}
+.atlas-footer-top h2{font-weight:700;letter-spacing:-.07em}
+.atlas-footer-top h2 em{color:var(--red)}
+.atlas-footer-side p{font-size:16px;line-height:1.75}
+.catalog-head h1{font-weight:700;line-height:.94;letter-spacing:-.08em}
+.catalog-head h1 span{font-size:1.15em;line-height:.9;color:var(--red)}
+.catalog-side p{font-size:16px;line-height:1.8}
+.detail-head h1,.detail-specs h2,.detail-contact-card h3{font-weight:700;letter-spacing:-.065em}
+.detail-specs h2 em,.detail-related .section-heading h2 em{font-family:var(--serif);font-size:1.17em;font-weight:400;letter-spacing:-.045em}
+.atlas-logo-name,.atlas-footer-wordmark{font-weight:700}
+@media(max-width:850px){
+  .narrative-title .narrative-serif{font-size:1.23em}
+  .gallery-head-aside p{font-size:15px}
+  .manifesto-bottom p{font-size:16px}
+}
+@media(max-width:650px){
+  .narrative-title h1,.narrative-title h2{font-size:clamp(48px,10.5vw,70px);line-height:.94}
+  .narrative-title .narrative-serif{font-size:1.18em;line-height:.91}
+  .showroom-narrative>p{font-size:14px;max-width:290px;line-height:1.6;margin-top:19px}
+  .narrative-eyebrow{font-size:9px}
+  .manifesto-heading-row h2{font-size:clamp(51px,11.5vw,88px)}
+  .manifesto-heading-row h2 em{font-size:1.02em}
+  .manifesto-bottom p{font-size:14px}
+  .gallery-head h2{font-size:clamp(51px,11.6vw,80px)}
+  .gallery-head h2 em{font-size:1.08em}
+  .gallery-head-aside p,.chapter-text p,.atlas-footer-side p{font-size:14px}
+  .chapter-text h2{font-size:clamp(59px,12vw,86px)}
+  .chapter-text h2 em{font-size:1.2em}
+  .closing-heading h2{font-size:clamp(62px,12.3vw,99px)}
+  .closing-heading h2 em{font-size:1.02em}
+  .atlas-footer-top h2{font-size:clamp(48px,10.6vw,79px)}
+  .catalog-head h1{font-size:clamp(60px,13vw,95px)}
+  .catalog-head h1 span{font-size:1.06em}
+  .catalog-side p{font-size:14px}
+  .mini-label,.eyebrow{font-size:10px}
+}
+@media(max-width:370px){
+  .narrative-title h1,.narrative-title h2{font-size:45px}
+  .manifesto-heading-row h2{font-size:47px}
+  .gallery-head h2{font-size:49px}
+  .closing-heading h2{font-size:55px}
+  .catalog-head h1{font-size:56px}
 }

@@ -14,28 +14,28 @@ const ConceptCar3D = dynamic(() => import("@/components/concept-car-3d"), {
 const chapters = [
   {
     number: "01", eyebrow: "CAPÍTULO I — A CHEGADA",
-    lines: ["O DESEJO", "TEM NOVA", "FORMA."],
+    lines: ["O DESEJO", "TEM NOVA", "forma."],
     description: "Automóveis extraordinários. Uma experiência que começa antes mesmo de girar a chave.",
     side: "FIRST IMPRESSION",
     status: "EXPLORAR A EXPERIÊNCIA"
   },
   {
     number: "02", eyebrow: "CAPÍTULO II — O MOVIMENTO",
-    lines: ["NÃO É", "APENAS", "DIRIGIR."],
+    lines: ["NÃO É", "APENAS", "dirigir."],
     description: "É sentir a precisão. Reconhecer a potência. Encontrar sua próxima grande escolha.",
     side: "ENGINEERED EMOTION",
     status: "OBSERVE AS LINHAS"
   },
   {
     number: "03", eyebrow: "CAPÍTULO III — O DETALHE",
-    lines: ["CADA CURVA.", "UMA", "ASSINATURA."],
+    lines: ["CADA CURVA.", "UMA", "assinatura."],
     description: "Há máquinas que passam. E há máquinas que deixam uma marca.",
     side: "DESIGNED TO FEEL",
     status: "DESCUBRA OUTRO ÂNGULO"
   },
   {
     number: "04", eyebrow: "CAPÍTULO IV — O DESTINO",
-    lines: ["SEU PRÓXIMO", "ÍCONE ESTÁ", "AQUI."],
+    lines: ["O PRÓXIMO", "ÍCONE ESTÁ", "aqui."],
     description: "Sua próxima história ao volante começa com uma conversa.",
     side: "THE NEXT CHAPTER",
     status: "CONTINUE PARA A COLEÇÃO"
@@ -119,8 +119,8 @@ export default function ShowroomExperience() {
           <div className="narrative-eyebrow"><span className="eyebrow-line"/>{current.eyebrow}</div>
           <div className="narrative-title">
             {current.lines.map((line, i) => chapter === 0
-              ? <h1 className={i === 2 ? "outline-type" : ""} key={line}>{line}</h1>
-              : <h2 className={i === 2 ? "outline-type" : ""} key={line}>{line}</h2>
+              ? <h1 className={i === 2 ? "narrative-serif" : ""} key={line}>{line}</h1>
+              : <h2 className={i === 2 ? "narrative-serif" : ""} key={line}>{line}</h2>
             )}
           </div>
           <p>{current.description}</p>
