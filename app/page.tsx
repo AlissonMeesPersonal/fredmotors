@@ -53,7 +53,20 @@ export default function Home() {
       <div className="gallery-footer"><span>Dados de anúncios públicos; confirme estoque e preços com a loja. Fotos ilustrativas.</span><Link href="/estoque">VER TODOS OS CARROS <MoveRight size={20}/></Link></div>
     </section>
 
-    <section className="velocity-band" aria-label="Assinatura da Fred Motors"><div>DRIVEN BY <span>OBSESSION.</span> DRIVEN BY <span>OBSESSION.</span></div></section>
+    <section className="velocity-band" aria-label="Fred Motors — Driven by obsession">
+      <div className="velocity-track">
+        {[0, 1].map(copy => (
+          <div className="velocity-group" key={copy} aria-hidden={copy === 1 ? true : undefined}>
+            <span className="velocity-filled">DRIVEN BY</span>
+            <span className="velocity-outline">OBSESSION.</span>
+            <span className="velocity-separator" aria-hidden="true">✳</span>
+            <span className="velocity-filled">DRIVEN BY</span>
+            <span className="velocity-outline">OBSESSION.</span>
+            <span className="velocity-separator" aria-hidden="true">✳</span>
+          </div>
+        ))}
+      </div>
+    </section>
 
     <section className="chapter-section">
       <div className="chapter-image"><div className="chapter-image-content"><span>FRED / MOTOR CULTURE</span><span className="chapter-image-mark">FM<span>®</span></span><span>DESIGN. PRESENCE. EMOTION.</span></div><span className="illustrative-note">Imagem ilustrativa</span></div>
