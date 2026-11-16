@@ -1,23 +1,26 @@
 {
   "name": "fred-motors",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "echo 'Lint not configured; type checking runs during Next.js build'"
+    "lint": "tsc --noEmit"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.8.0",
     "lucide-react": "^0.468.0",
     "next": "16.4.6",
     "react": "19.3.1",
-    "react-dom": "19.3.1"
+    "react-dom": "19.3.1",
+    "three": "^0.180.0"
   },
   "devDependencies": {
     "@types/node": "^22.15.0",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.2.0",
+    "@types/three": "^0.180.0",
     "typescript": "^5.9.3"
   }
 }

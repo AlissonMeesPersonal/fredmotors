@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
 import SiteHeader from "@/components/site-header";
+import SiteFooter from "@/components/site-footer";
 import WhatsappFab from "@/components/whatsapp-fab";
 
 export const metadata: Metadata = {
-  title: { default: "Fred Motors | Automóveis Selecionados", template: "%s | Fred Motors" },
-  description: "Fred Motors — uma curadoria de veículos premium em Santa Cruz do Sul, RS. Descubra a coleção e fale com um consultor.",
-  keywords: ["Fred Motors", "veículos premium", "Santa Cruz do Sul", "BMW", "Volvo", "carros de luxo"],
+  title: { default: "Fred Motors | Beyond Ordinary", template: "%s | Fred Motors" },
+  description: "Fred Motors. Uma experiência digital imersiva e uma coleção de automóveis selecionados em Santa Cruz do Sul, RS.",
+  keywords: ["Fred Motors", "Fred Motors Santa Cruz do Sul", "veículos premium", "automóveis selecionados"],
   openGraph: {
-    title: "Fred Motors — Automóveis Selecionados",
-    description: "Mais do que dirigir. Escolher o extraordinário.",
+    title: "Fred Motors — Beyond Ordinary",
+    description: "O desejo tem nova forma. Descubra a Fred Motors.",
     type: "website",
     locale: "pt_BR"
   },
@@ -17,5 +18,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="pt-BR"><body><SiteHeader />{children}<WhatsappFab /></body></html>;
+  return <html lang="pt-BR"><body><SiteHeader />{children}<SiteFooter/><WhatsappFab /></body></html>;
 }

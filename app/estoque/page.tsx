@@ -1,13 +1,23 @@
 import type { Metadata } from "next";
 import InventoryExplorer from "@/components/inventory-explorer";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowDownRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Coleção de veículos",
-  description: "Conheça a seleção premium de automóveis anunciados pela Fred Motors em Santa Cruz do Sul."
+  title: "Coleção — Automóveis Selecionados",
+  description: "Uma coleção de veículos premium Fred Motors. Explore modelos e consulte a disponibilidade com nossa equipe."
 };
 
 export default function InventoryPage() {
-  return <main className="inventory-page"><section className="interior-hero"><div className="container"><Link className="back-breadcrumb" href="/"><ArrowLeft size={15}/> Página inicial</Link><span className="eyebrow accent">THE COLLECTION / FRED MOTORS</span><h1>Encontre o seu<br/><em>extraordinário.</em></h1><p>Explore a coleção e descubra o modelo que traduz o seu estilo.</p></div><span className="interior-hero-outline">SELECTED AUTOMOBILES</span></section><section className="inventory-section container"><InventoryExplorer/></section></main>;
+  return <main className="inventory-page" id="inicio">
+    <section className="catalog-hero">
+      <Link className="back-breadcrumb" href="/"><ArrowLeft size={16}/> VOLTAR À EXPERIÊNCIA</Link>
+      <div className="catalog-head">
+        <div><span className="mini-label signal-text">FRED MOTORS / THE CAR COLLECTION</span><h1>A NOSSA<br/><span>COLEÇÃO.</span></h1></div>
+        <div className="catalog-side"><span>NO ORDINARY MACHINES.</span><p>Um lugar para descobrir o próximo veículo que combina com quem você é.</p><ArrowDownRight size={33} strokeWidth={1.4}/></div>
+      </div>
+      <div className="catalog-hero-bottom"><span>001 — SHOWROOM DIGITAL</span><span>EXPLORE. ENCONTRE. CONECTE-SE.</span></div>
+    </section>
+    <section className="inventory-section"><InventoryExplorer/></section>
+  </main>;
 }

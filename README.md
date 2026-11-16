@@ -1,46 +1,36 @@
-# Fred Motors — Automóveis Selecionados
+# Fred Motors — Digital Automotive Atelier
 
-Website independente com linguagem editorial premium, criado em Next.js + TypeScript para a **Fred Motors de Santa Cruz do Sul/RS**.
+Site Next.js 16 / React 19 / Three.js / React Three Fiber para a Fred Motors. O conceito 2.0 é um **showroom WebGL 3D** com storytelling em quatro capítulos ao rolar a página, catálogo editorial, páginas individuais dos veículos e atendimento por WhatsApp.
 
-## Início rápido
+## Rodar localmente
+- npm install
+- npm run dev
+- npm run build
+- npm run lint
 
-1. Execute npm install
-2. Execute npm run dev
-3. Acesse http://localhost:3000
+## Publicação
+- GitHub: https://github.com/AlissonMeesPersonal/fredmotors
+- Vercel: https://fredmotors.vercel.app
+- Projeto Vercel: fredmotors (produção: main)
 
-Para publicar, importe o repositório AlissonMeesPersonal/fredmotors na **Vercel**, framework Next.js, root directory na raiz. O deploy é acionado pelo branch main depois da conexão.
+## Experiência de rolagem 3D
+- components/concept-car-3d.tsx — escultura automotiva 3D *conceitual*, criada com geometria Three.js; não reproduz nenhum carro do estoque
+- components/showroom-experience.tsx — quatro capítulos, progresso de scroll, orbitamento de câmera, transições e controles para pular a experiência
+- app/page.tsx — manifesto, seleção assimétrica, imagem editorial, contato
+- app/globals.css — sistema visual proprietário (grafite, papel e vermelho)
+- Layout responsivo e alternativa estática quando WebGL não estiver disponível ou o usuário preferir movimento reduzido
 
-## Páginas disponíveis
+## Estoque temporário
+A fonte de dados desta etapa é lib/vehicles.ts. O conteúdo é de anúncios públicos consultados em 16/11/2026, **não** estoque verificado em tempo real. Edite a lista vehicles[] e faça commit em main para atualizar o site. O catálogo permite busca por marca/modelo/ano, filtros por tipo, ordenação e página individual com WhatsApp pré-preenchido.
 
-- / — hero cinematográfico, seleção, essência, diferenciais e contatos
-- /estoque — busca, filtros por categoria e ordenação
-- /veiculos/[slug] — página individual de cada veículo, com detalhes e WhatsApp pré-preenchido
+**Ainda não há painel privado de gestão de estoque.** É necessário autenticação, backend, upload de arquivos e banco de dados antes de liberar edição por usuários de loja.
 
-## Como atualizar o estoque nesta versão
-
-Abra lib/vehicles.ts no GitHub e edite os objetos de vehicles. Cada objeto representa um anúncio: slug, brand, model, version, year, mileage, price, category, fuel, transmission, image, imageAlt e featured. Depois de salvar um commit, a Vercel publica a versão atualizada se estiver vinculada ao repositório.
-
-**Observação:** este é um catálogo gerenciado pelo repositório, sem painel administrativo ou sincronização de estoque em tempo real. Um painel privado com uploads, inclusão, edição, venda/remoção e autenticação exige a etapa de backend (ex.: Neon + storage) e credenciais.
-
-## Identidade e imagens
-
-O Instagram não expôs uma versão estável da logo original para download automático. Foi implementada uma assinatura tipográfica editorial temporária. Substituir pelo arquivo oficial (SVG/PNG) fornecido pelo cliente antes da publicação definitiva.
-
-As imagens do site são **editoriais ilustrativas**, não fotos reais de veículos do estoque. Quando receber fotos reais autorizadas, colocá-las em public/vehicles e trocar o campo image pelo caminho /vehicles/foto-do-carro.webp. A marca FRED MOTORS não afirma posse das imagens ilustrativas.
-
-## Dados comerciais e fontes
+## Logo e fotos
+A marca no cabeçalho ainda é provisória porque não foi possível extrair do Instagram uma logo de alta resolução. Solicitar PNG/SVG oficial. Fotos externas são **ilustrativas**, identificadas assim no site e devem ser substituídas por fotos reais autorizadas. Os dados de veículos, preços, endereço e WhatsApp precisam ser confirmados pela Fred Motors antes do lançamento comercial.
 
 Instagram: https://www.instagram.com/fredmotorss/
-WhatsApp informado na vitrine pública: (51) 99863-1212
-Endereço de atendimento anunciado: Rua São José, 1302, Bairro Goiás, Santa Cruz do Sul/RS
-Anúncios-base consultados em 16/11/2026: https://www.carrosnaserra.com.br/revenda/santa-cruz-do-sul/fred-motors/bHVjYXNlZHVhcmRv
+Contato provisório de anúncios públicos: (51) 99863-1212
+Endereço de anúncio: Rua São José, 1302, Bairro Goiás, Santa Cruz do Sul, RS.
 
-**Importante:** confirmar junto à Fred Motors os dados de contato, endereço e preços antes do lançamento, pois as fontes públicas podem mudar. As informações de anúncios são uma fotografia do dia da consulta, não um feed de estoque em tempo real.
-
-## Próximos passos recomendados
-
-1. Inserir logo oficial em alta resolução
-2. Trocar todas as fotos ilustrativas pelas fotos do próprio estoque
-3. Confirmar contatos/endereço e revisar as informações comerciais
-4. Implementar painel protegido e banco de dados para operações de estoque
-5. Publicar o domínio e gerar sitemap/analytics conforme necessidade
+## Próxima fase
+Adicionar painel seguro para cadastrar, atualizar, marcar vendidos e excluir veículos, upload de fotos, storage e sincronização em tempo real. Substituir conceito 3D por modelo GLB licenciado/aprovado se houver arte 3D oficial.
